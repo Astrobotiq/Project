@@ -2,7 +2,7 @@ public class Tank extends Character implements Playable{
     private String name;
 
     public Tank(String name){
-        super( (int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)) );
+        super( (int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)) );
         this.name = name;
     }
 
@@ -19,5 +19,8 @@ public class Tank extends Character implements Playable{
     @Override
     public int attack(){
         return onHand[0].getDamage()+super.getStrenght();
+    }
+    public void stunnig(Enemy enemy,int turn){
+
     }
 }

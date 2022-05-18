@@ -3,14 +3,15 @@ public class Character {
     private int vitality;
     private int intelligent;
     private int HP;
+    private int dexerity;
 
-    Weapons[] onHand = new Weapons[1];
-    Clothing[] onBody = new Clothing[1];
 
-    public Character(int strenght,int vitality,int intelligent){
+
+    public Character(int strenght,int vitality,int intelligent,int dexerity){
         this.setStrenght(strenght);
         this.setVitality(vitality);
         this.setIntelligent(intelligent);
+        this.setDexerity(dexerity);
         HP = (int)((0.7*vitality)+(0.2*strenght)+(0.1*intelligent));
     }
 
@@ -55,5 +56,12 @@ public class Character {
 
     public int getHP() {
         return HP;
+    }
+    public int getDexerity() {
+        return dexerity;
+    }
+
+    public void setDexerity(int dexerity) {
+        this.dexerity = dexerity;
     }
 }

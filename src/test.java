@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class test {
@@ -6,9 +7,11 @@ public class test {
 
         Scanner input = new Scanner(System.in);
         ArrayList<Character> Level = new ArrayList<>();
+        ArrayList<Character> actionOrder = new ArrayList<>();
         Enemy enemy;
-        int enemyNumber = 4;
-        int floorNumber = 2;
+        int turn = 1;
+        int enemyNumber = 2;
+        int floorNumber = 1;
 
         /*Karakterler için kıyafet oluşturduğumuz kısım*/
         Light_Armor light_armor = new Light_Armor();
@@ -46,16 +49,35 @@ public class test {
             for (int i = enemyNumber;i>0;i-- ){
                 createEnemy(enemy=new Enemy(),Level);
             }
+            do {
+                int willDelete = 0;
+                Character[] highestChar = new Character[1];
+                highestChar[0] = Level.get(0);
+                for (int i=0;i<Level.size();i++){
+                    if (Level.get(i).getDexerity()>highestChar[0].getDexerity()){
+                        highestChar[0] = Level.get(i);
+                        willDelete = i;
+                    }
+                }
+                actionOrder.add(highestChar[0]);
+                Level.remove(willDelete);
 
-            for (int i=0;i<Level.size();i++){
-                Level.get(i).showInfo();
+            }while ((enemyNumber+3)!=actionOrder.size());
+            while (true){
+                int sıra =0;
+                
+                if(sıra==actionOrder.size()){
+                    sıra = 0;
+                    turn += 1;
+                }
+                else sıra += 1;
             }
 
             break;
         }
     }
-
     public static void createEnemy(Enemy enemy,ArrayList<Character>Level){
         Level.add(enemy);
     }
 }
+
