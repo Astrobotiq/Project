@@ -1,14 +1,15 @@
 public class Fighter extends Character implements Playable{
-    private String name;
+
+
 
     public Fighter(String name){
-        super( (int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)));
-        this.name = name;
+        super( (int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,1);
+
     }
 
     @Override
     public void showInfo(){
-        System.out.println("Name of Fighter:"+name+"\n"+
+        System.out.println(
                 "Strengt of Fighter:"+getStrenght()+"\n"+
                 "Vitality of Fighter:"+getVitality()+"\n"+
                 "Intelligent of Fighter:"+getIntelligent()+"\n"+
@@ -26,4 +27,5 @@ public class Fighter extends Character implements Playable{
     public void addClothing(Clothing clothing){
         onBody[0] = clothing;
     }
+
 }

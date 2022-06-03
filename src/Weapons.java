@@ -1,10 +1,11 @@
 public class Weapons extends Items{
     private int damage;
+    private int type;
 
-
-    public Weapons(String name, double weight, int value,int damage) {
+    public Weapons(String name, double weight, int value,int damage,int type) {
         super(name,weight,value);
         this.damage = damage;
+        this.type = type;
     }
 
     public String getName(){
@@ -28,4 +29,14 @@ public class Weapons extends Items{
     public int getDamage() {
         return damage;
     }
+    public int getType(){
+        return type;
+    }
+    public void special(Character holder, Character effected){
+    }
+    public void special(Character character,int turn){
+
+    }
+    public void special(Character character){}
+
 }

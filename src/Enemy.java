@@ -1,9 +1,10 @@
 public class Enemy extends Character{
-    boolean stunned;
-    int playableTurn;
+    private boolean stunned;
+    private int playableTurn;
+    private String name;
     public Enemy(){
-        super( (int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)) );
-        stunned = false;
+        super( (int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),false,4);
+
     }
 
 
@@ -24,7 +25,7 @@ public class Enemy extends Character{
     }
     public void isPlayableTurnCome(int turn){
         if (turn==playableTurn){
-            stunned=false;
+            stunned = false;
             attack();
         }
         else if(turn != playableTurn ){
@@ -33,5 +34,9 @@ public class Enemy extends Character{
 
     }
 
+    public void setStunned(boolean stunned,int turn) {
+        this.stunned = stunned;
+        playableTurn = turn+3;
+    }
 }
 
