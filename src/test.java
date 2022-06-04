@@ -70,7 +70,7 @@ public class test {
 
                 for (int i=0;i<actionOrder.size();i++){
                     if (actionOrder.get(i).getType()==4){
-                        if (actionOrder.get(i).isVisiable()==true){
+                        if (actionOrder.get(i).isVisiable()){
                             areThereEnemy = true;
                         }
                     }
@@ -81,8 +81,8 @@ public class test {
                 else {
                     System.out.println("You have killed all enemy on level. Well done.!.!");
                     int[] indexOfEnemy = new int[enemyNumber];
+                    int counter = 0;
                     for (int i=0;i<actionOrder.size();i++){
-                        int counter = 0;
                         if (actionOrder.get(i).getType()==4){
                             indexOfEnemy[counter] = i;
                             counter+=1;

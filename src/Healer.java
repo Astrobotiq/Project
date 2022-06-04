@@ -3,7 +3,7 @@ public class Healer extends Character implements Playable{
 
 
     public Healer(String name){
-        super( (int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,2);
+        super( (int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,2,"Healer");
 
     }
 

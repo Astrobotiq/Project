@@ -3,7 +3,7 @@ public class Fighter extends Character implements Playable{
 
 
     public Fighter(String name){
-        super( (int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,1);
+        super( (int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,1,"Fighter");
 
     }
 

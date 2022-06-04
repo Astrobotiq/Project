@@ -3,7 +3,7 @@ public class Enemy extends Character{
     private int playableTurn;
     private String name;
     public Enemy(){
-        super( (int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),false,4);
+        super( (int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),false,4,"Enemy");
 
     }
 

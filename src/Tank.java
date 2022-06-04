@@ -5,7 +5,7 @@ public class Tank extends Character{
 
 
     public Tank(String name){
-        super( (int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,3);
+        super( (int)(1+Math.floor(Math.random()*5)),(int)(6+Math.floor(Math.random()*5)),(int)(3+Math.floor(Math.random()*5)),(int)(1+Math.floor(Math.random()*20)),true,3,"Tank");
 
     }
 

@@ -22,7 +22,7 @@ public class Character implements Playable{
     }
 
 
-    public Character(int strenght,int vitality,int intelligent,int dexerity,boolean playable,int type){
+    public Character(int strenght,int vitality,int intelligent,int dexerity,boolean playable,int type, String name){
         this.setStrenght(strenght);
         this.setVitality(vitality);
         this.setIntelligent(intelligent);
